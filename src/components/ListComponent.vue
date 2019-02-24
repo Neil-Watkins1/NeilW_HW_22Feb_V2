@@ -1,5 +1,6 @@
 <template lang="html">
-<li v-on:click="handleClick">{{recipe.results}}</li>
+
+<li v-on:click="handleClick">{{recipe.title}}</li>
 </template>
 
 <script>
@@ -10,7 +11,8 @@ export default {
   props: ['recipe'],
   methods: {
     handleClick(){
-      console.log('recipe', this.recipe);
+      eventBus.$emit('recipe-selected', this.recipe);
+
     }
   }
 }

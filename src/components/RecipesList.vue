@@ -1,7 +1,8 @@
 <template lang="html">
   <div>
     <ul>
-      <list-item v-for="(recipe, index) in recipes.results" :recipe="recipe" :key="index"></list-item>
+      <list-item v-for="(recipe, index) in recipes" :recipe="recipe" :key="index"></list-item>
+
     </ul>
   </div>
 
